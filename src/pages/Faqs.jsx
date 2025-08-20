@@ -15,7 +15,7 @@ const  Faqs = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
+    <div className="max-w-6xl mx-auto px-4 py-10 text-center">
       <h2 className="text-2xl font-semibold text-center mb-6">FAQs</h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => (

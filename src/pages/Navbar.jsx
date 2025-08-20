@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react"; // icons
+import { Menu, X } from "lucide-react"; 
 import Logo from "../assets/Logo.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,39 +13,39 @@ const Navbar = () => {
           <img
             src={Logo}
             alt="Kaizen IT Solutions"
-            className="h-30 w-auto object-contain translate-y-2 md:h-34 lg:h-34"
+            className="h-20 w-auto object-contain translate-y-2 md:h-24 lg:h-24"
           />
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-10 text-sm font-medium">
           <li>
-            <a
-              href="#"
+            <Link
+             to="/"
               className="text-red-600 border-b-2 border-red-600 pb-1 transition-colors"
             >
               HOME
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-red-600 transition-colors">
+            <Link to="/about" className="hover:text-red-600 transition-colors">
               ABOUT
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-red-600 transition-colors">
+            <Link to="/services" className="hover:text-red-600 transition-colors">
               SERVICES
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-red-600 transition-colors">
+            <Link to="/blogs" className="hover:text-red-600 transition-colors">
               BLOGS
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-red-600 transition-colors">
+            <Link to="/contact" className="hover:text-red-600 transition-colors">
               CONTACT
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -67,32 +68,32 @@ const Navbar = () => {
         <div className="md:hidden bg-white border-t shadow-md animate-slideDown">
           <ul className="flex flex-col space-y-4 p-4 text-sm">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="text-red-600 border-b-2 border-red-600 pb-1"
               >
                 HOME
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-red-600">
+              <Link to="/about" className="hover:text-red-600">
                 ABOUT
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-red-600">
+              <Link to="/services" className="hover:text-red-600">
                 SERVICES
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-red-600">
+              <Link to="/blogs" className="hover:text-red-600">
                 BLOGS
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-red-600">
+              <Link to="/contact" className="hover:text-red-600">
                 CONTACT
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="px-4 pb-4">
