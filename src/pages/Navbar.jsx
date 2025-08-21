@@ -10,11 +10,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="h-20 w-[200px] flex items-center justify-center overflow-hidden">
-          <img
+          <Link to="/">
+           <img
             src={Logo}
             alt="Kaizen IT Solutions"
             className="h-20 w-auto object-contain translate-y-2 md:h-24 lg:h-24"
           />
+          </Link>
+         
         </div>
 
         {/* Desktop Menu */}

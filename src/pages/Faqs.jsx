@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Background from "../assets/Background.jpg";
 const faqs = [
   { question: 'What does "Managed IT Services" include?', answer: "Managed IT Services typically include 24/7 monitoring, helpdesk support, cloud solutions, backups, and IT strategy consulting." },
   { question: "How is Kaizen IT Solutions different from other IT providers?", answer: "Kaizen IT Solutions focuses on personalized IT strategies, proactive support, and long-term partnerships, unlike providers that only offer reactive fixes." },
@@ -15,6 +15,7 @@ const  Faqs = () => {
   };
 
   return (
+    <>
     <div className="max-w-6xl mx-auto px-4 py-10 text-center">
       <h2 className="text-2xl font-semibold text-center mb-6">FAQs</h2>
       <div className="space-y-4">
@@ -34,6 +35,14 @@ const  Faqs = () => {
         ))}
       </div>
     </div>
+  <div className="w-full">
+  <img 
+    src={Background} 
+    alt="Background" 
+    className="h-60 w-screen mt-10 mb-10" 
+  />
+</div>
+    </>
   );
 }
 

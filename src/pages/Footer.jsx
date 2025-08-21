@@ -29,7 +29,7 @@ const Footer = () => {
               placeholder="care@kaizen.com"
               className="rounded px-3 py-2 text-black w-full max-w-xs bg-white"
             />
-            <button className="bg-blue-500 mt-2 px-4 py-2 rounded text-white">
+            <button className="bg-gray-200 mt-2 px-4 py-2 rounded text-white">
               Subscribe
             </button>
           </div>
