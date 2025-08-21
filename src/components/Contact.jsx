@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white px-6 py-16 flex items-center justify-center">
+    <section className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white px-6 py-16 flex items-center justify-center mt-20">
       <div className="max-w-4xl w-full bg-gray-800/60 backdrop-blur-lg p-10 rounded-2xl shadow-2xl">
         {/* Heading */}
         <h1 className="text-5xl font-bold text-center">

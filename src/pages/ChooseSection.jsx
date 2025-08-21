@@ -2,28 +2,27 @@ import Robot from "../assets/Rob.png";
 
 const ChooseSection = () => {
   return (
-    <section className="bg-gray-50 py-12 px-6 md:px-16 flex flex-col md:flex-row items-center relative">
+    <section className="bg-gray-50 py-12 px-6 md:px-16 flex flex-col md:flex-row items-center relative overflow-hidden">
       {/* Text */}
-      <div className="relative w-full md:w-1/2 max-w-6xl px-4  p-6 rounded-lg z-10">
+      <div className="relative w-full md:w-1/2 px-4 md:px-6 py-6 rounded-lg z-10">
         <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-4">
           WHY CHOOSE US
         </h2>
         <ul className="space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
           <li>
             <strong>Trusted & Accredited:</strong>
-            <p className="flex flex-col">
+            <p>
               BBB-accredited with an A rating—proof of our unwavering
-              commitment to trust, transparency, and
+              commitment to trust, transparency, and performance.
             </p>
-            <span>performance.</span>
           </li>
           <li>
             <strong>Swift Results, Small Business Focus:</strong>
-            <p className="flex flex-col">
+            <p>
               Founded in July 2023, we bring nimble expertise and personalised
-              support to businesses looking to elevate
+              support to businesses looking to elevate their IT without the
+              typical enterprise overhead.
             </p>
-            <span>their IT without the typical enterprise overhead.</span>
           </li>
           <li>
             <strong>Comprehensive, Proactive Service:</strong>
@@ -39,11 +38,11 @@ const ChooseSection = () => {
       </div>
 
       {/* Robot Image */}
-      <div className="absolute right-0 bottom-0 w-full flex justify-end items-end">
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
         <img
           src={Robot}
           alt="Robot"
-          className="max-h-[500px] object-contain"
+          className="max-h-[400px] md:max-h-[500px] w-auto object-contain"
         />
       </div>
     </section>

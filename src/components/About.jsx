@@ -4,7 +4,7 @@ const About = () => {
       <div className="max-w-5xl text-center space-y-8">
         {/* Heading */}
         <h1 className="text-5xl font-bold tracking-tight">
-          About <span className="text-blue-500">HM Kaizen</span>
+          About <span className="text-blue-500">Kaizen</span>
         </h1>
 
         {/* Tagline */}
@@ -15,7 +15,7 @@ const About = () => {
         {/* Content */}
         <div className="bg-gray-800/60 backdrop-blur-lg p-8 rounded-2xl shadow-2xl">
           <p className="text-lg leading-relaxed text-gray-200">
-            HM Kaizen is a next-generation IT company committed to delivering cutting-edge
+           Kaizen is a next-generation IT company committed to delivering cutting-edge
             technology solutions for businesses worldwide. With a focus on{" "}
             <span className="text-blue-400 font-semibold">innovation, scalability,</span> and{" "}
             <span className="text-blue-400 font-semibold">customer satisfaction</span>, 

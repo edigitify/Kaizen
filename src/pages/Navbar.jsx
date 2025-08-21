@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; 
 import Logo from "../assets/Logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,32 +20,62 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-10 text-sm font-medium">
           <li>
-            <Link
+            <NavLink
              to="/"
-              className="text-red-600 border-b-2 border-red-600 pb-1 transition-colors"
+              className={({ isActive }) =>
+                `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
+                  isActive
+                    ? "text-red-700 border-b-2 border-red-700"
+                    : "text-red-400 border-b-2 border-transparent"
+                }`
+              }
             >
               HOME
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/about" className="hover:text-red-600 transition-colors">
+            <NavLink to="/about" className={({ isActive }) =>
+                `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
+                  isActive
+                    ? "text-red-700 border-b-2 border-red-700"
+                    : "text-red-400 border-b-2 border-transparent"
+                }`
+              }>
               ABOUT
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/services" className="hover:text-red-600 transition-colors">
+            <NavLink to="/services" className={({ isActive }) =>
+                `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
+                  isActive
+                    ? "text-red-700 border-b-2 border-red-700"
+                    : "text-red-400 border-b-2 border-transparent"
+                }`
+              }>
               SERVICES
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/blogs" className="hover:text-red-600 transition-colors">
+            <NavLink to="/blogs" className={({ isActive }) =>
+                `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
+                  isActive
+                    ? "text-red-700 border-b-2 border-red-700"
+                    : "text-red-400 border-b-2 border-transparent"
+                }`
+              }>
               BLOGS
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact" className="hover:text-red-600 transition-colors">
+            <NavLink to="/contact" className={({ isActive }) =>
+                `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
+                  isActive
+                    ? "text-red-700 border-b-2 border-red-700"
+                    : "text-red-400 border-b-2 border-transparent"
+                }`
+              }>
               CONTACT
-            </Link>
+            </NavLink>
           </li>
         </ul>
 
@@ -68,32 +98,32 @@ const Navbar = () => {
         <div className="md:hidden bg-white border-t shadow-md animate-slideDown">
           <ul className="flex flex-col space-y-4 p-4 text-sm">
             <li>
-              <Link
+              <NavLink
                 to="/"
                 className="text-red-600 border-b-2 border-red-600 pb-1"
               >
                 HOME
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/about" className="hover:text-red-600">
+              <NavLink to="/about" className="hover:text-red-600">
                 ABOUT
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/services" className="hover:text-red-600">
+              <NavLink to="/services" className="hover:text-red-600">
                 SERVICES
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/blogs" className="hover:text-red-600">
+              <NavLink to="/blogs" className="hover:text-red-600">
                 BLOGS
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-red-600">
+              <NavLink to="/contact" className="hover:text-red-600">
                 CONTACT
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <div className="px-4 pb-4">
