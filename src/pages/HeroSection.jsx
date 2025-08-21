@@ -11,7 +11,7 @@ const HeroSection = () => {
         <img
           src={Background}
           alt="IT Solutions"
-          className="absolute inset-0 w-full h-full object-cover rounded-[53px]"
+          className="absolute inset-0 w-full h-full object-cover rounded-[30px]"
         />
 
         {/* Content Box */}

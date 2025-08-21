@@ -1,8 +1,9 @@
 import Robot from "../assets/Rob.png";
+import RobotSmall from "../assets/RobMob.png";
 
 const ChooseSection = () => {
   return (
-    <section className="bg-gray-50 py-12 px-6 md:px-16 flex flex-col md:flex-row items-center relative overflow-hidden">
+    <section className="bg-gray-50 py-12 px-4 md:px-16 flex flex-row md:flex-row items-center relative overflow-hidden">
       {/* Text */}
       <div className="relative w-full md:w-1/2 px-4 md:px-6 py-6 rounded-lg z-10">
         <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-4">
@@ -12,8 +13,8 @@ const ChooseSection = () => {
           <li>
             <strong>Trusted & Accredited:</strong>
             <p>
-              BBB-accredited with an A rating—proof of our unwavering
-              commitment to trust, transparency, and performance.
+              BBB-accredited with an A rating—proof of our unwavering commitment
+              to trust, transparency, and performance.
             </p>
           </li>
           <li>
@@ -38,11 +39,18 @@ const ChooseSection = () => {
       </div>
 
       {/* Robot Image */}
-      <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
+        {/* Desktop Image */}
         <img
           src={Robot}
           alt="Robot"
-          className="max-h-[400px] md:max-h-[500px] w-auto object-contain"
+          className="hidden md:block max-h-[600px] w-auto object-contain"
+        />
+        {/* Mobile Image */}
+        <img
+          src={RobotSmall}
+          alt="Robot Small"
+          className="block md:hidden max-h-[350px] w-auto object-contain"
         />
       </div>
     </section>
