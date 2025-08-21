@@ -41,24 +41,30 @@ const HeroSection = () => {
         {/* Right Side - Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-red-900 w-full p-6">
           <div className="flex flex-row items-center justify-center gap-3 p-6 rounded-2xl">
+            <div className="border-2 white flex flex-row gap-4">
             <FaThumbsUp className="text-4xl text-white" />
             <div className="flex items-center justify-center gap-2 text-center">
               <p className="text-2xl font-bold">99%</p>
+              </div>
+              </div>
               <p className="text-lg flex flex-col">
                 <span className="block">HAPPY</span>
                 <span className="block">CLIENTS</span>
               </p>
-            </div>
+            
           </div>
 
           <div className="flex flex-row items-center justify-center gap-3 p-6 rounded-2xl ">
+            <div className="border-2 white flex flex-row gap-4">
             <FaHeadset className="text-4xl text-white" />
             <div className="flex items-center justify-center gap-2 text-center">
               <p className="text-2xl font-bold">24/7</p>
+              </div>
+              </div>
               <p className="text-lg flex flex-col">
                 SUPPORT <span className="ml-1">AVAILABLE</span>
               </p>
-            </div>
+            
           </div>
         </div>
       </section>

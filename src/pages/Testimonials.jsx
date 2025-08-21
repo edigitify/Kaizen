@@ -4,30 +4,37 @@ import Camera from "../assets/Cam1.png";
 const Testimonials = () => {
   return (
     <section className="w-full bg-white">
-      {/* ✅ Container अब responsive है */}
-      <div className="w-full mx-auto px-4 lg:max-w-6xl">
-        {/* Heading + Robot + Card */}
-        <div className="flex flex-row items-center justify-between gap-4">
+      <div className="max-w-3/4 mx-auto px-4 lg:max-w-6xl">
+        {/* 🔹 MOBILE VIEW : Heading + Camera in one row */}
+        <div className="flex items-center justify-between w-full md:hidden mb-6">
           {/* Heading */}
-          <h2 className="text-gray-500 uppercase tracking-wide text-sm sm:text-base flex flex-col text-left w-28 sm:w-auto">
+          <h2 className="text-gray-500 uppercase tracking-wide text-sm flex flex-col text-left">
             LOOK WHAT
-            <span className="text-black text-lg sm:text-2xl">OUR CLIENTS</span>
-            <span className="text-gray-500 text-sm sm:text-lg">
-              HAVE TO SAY.
-            </span>
+            <span className="text-black text-lg">OUR CLIENTS</span>
+            <span className="text-gray-500 text-sm">HAVE TO SAY.</span>
           </h2>
 
           {/* Camera Image - Mobile */}
-          <div className="w-20 h-60 sm:w-40 sm:h-60 md:hidden">
+          <div className="w-20 h-28 sm:w-28 sm:h-40">
             <img
               src={Camera}
               alt="Camera Mobile"
               className="w-full h-full object-contain"
             />
           </div>
+        </div>
+
+        {/* 🔹 TABLET & DESKTOP VIEW */}
+        <div className="hidden md:flex flex-row items-center justify-between gap-4">
+          {/* Heading */}
+          <h2 className="text-gray-500 uppercase tracking-wide text-base flex flex-col text-left w-auto">
+            LOOK WHAT
+            <span className="text-black text-2xl">OUR CLIENTS</span>
+            <span className="text-gray-500 text-lg">HAVE TO SAY.</span>
+          </h2>
 
           {/* Camera Image - Tablet & Desktop */}
-          <div className="hidden md:block w-72 h-72 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
+          <div className="w-72 h-72 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
             <img
               src={Camera}
               alt="Camera"
@@ -36,19 +43,17 @@ const Testimonials = () => {
           </div>
 
           {/* Highlight Card */}
-          <div className="bg-gray-100 rounded-xl shadow-sm p-3 sm:p-6 text-left w-32 sm:w-64 md:w-80 h-auto">
-            <h3 className="font-semibold text-sm sm:text-lg mb-2 sm:mb-6">
-              Highly Recommend!
-            </h3>
-            <p className="text-gray-700 text-xs sm:text-base">
+          <div className="bg-gray-100 rounded-xl shadow-sm p-6 text-left w-64 md:w-80">
+            <h3 className="font-semibold text-lg mb-6">Highly Recommend!</h3>
+            <p className="text-gray-700 text-base">
               Working with Kaizen IT Solutions has been a fantastic experience.
               Their dedication to our success is evident in every interaction.
             </p>
           </div>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 mt-12">
+        {/* 🔹 Testimonials Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 mt-12 w-full">
           {/* Left big block */}
           <div className="col-span-1 sm:col-span-1 lg:col-span-1 flex justify-center">
             <div className="max-w-sm rounded-lg shadow-md h-auto sm:h-80 bg-gray-100 p-6 text-left">
