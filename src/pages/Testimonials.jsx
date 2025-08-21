@@ -4,7 +4,7 @@ import Camera from "../assets/Cam1.png";
 const Testimonials = () => {
   return (
     <section className="w-full bg-white">
-      <div className="max-w-3/4 mx-auto px-4 lg:max-w-6xl">
+      <div className="max-w-3/4 mx-auto px-4 ">
         {/* 🔹 MOBILE VIEW : Heading + Camera in one row */}
         <div className="flex items-center justify-between w-full md:hidden mb-6">
           {/* Heading */}
@@ -53,7 +53,7 @@ const Testimonials = () => {
         </div>
 
         {/* 🔹 Testimonials Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 mt-12 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 ">
           {/* Left big block */}
           <div className="col-span-1 sm:col-span-1 lg:col-span-1 flex justify-center">
             <div className="max-w-sm rounded-lg shadow-md h-auto sm:h-80 bg-gray-100 p-6 text-left">
@@ -80,8 +80,8 @@ const Testimonials = () => {
           </div>
 
           {/* Big vertical block */}
-          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
-            <div className="rounded-lg shadow-md h-auto sm:h-80 bg-gray-100 p-6 text-left">
+          <div className="col-span-1 flex justify-center">
+            <div className="rounded-lg shadow-md h-auto sm:h-80 bg-gray-100 p-6 text-left max-w-sm">
               <h3 className="text-lg mb-4">A Game Changer for Us!</h3>
               <p className="text-gray-700">
                 The expertise and support from Kaizen IT Solutions have been

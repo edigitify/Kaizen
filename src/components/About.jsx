@@ -1,6 +1,6 @@
 const About = () => {
   return (
-   <div className="font-sans text-gray-800">
+   <div className="font-sans text-gray-800 mt-20">
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 px-6 md:px-20">
         <div className="max-w-4xl mx-auto text-center">
