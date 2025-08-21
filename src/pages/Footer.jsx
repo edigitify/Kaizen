@@ -46,17 +46,17 @@ const Footer = () => {
               <Link to="/about">About us</Link>
             </li>
             <li>
-              {" "}
-              <Link to="/services">SERVICES</Link>{" "}
+              {" "}SERVICES
+              <Link to="/services">Services</Link>{" "}
             </li>
 
             <li>
               {" "}
-              <Link to="/blogs">BLOGS</Link>{" "}
+              <Link to="/blogs">Blogs</Link>{" "}
             </li>
             <li>
               {" "}
-              <Link to="/contact">CONTACT US</Link>{" "}
+              <Link to="/contact">Contact us</Link>{" "}
             </li>
           </ul>
         </div>
@@ -66,7 +66,7 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-3">All Products List</h3>
           <ul className="space-y-2">
             <li>IT SECTOR</li>
-            <li>SOFTWERE DEVELOPER</li>
+            <li>SOFTWARE DEVELOPER</li>
             <li>FULL STACK DEVELOPER</li>
             <li>MERN STACK DEVELOPER</li>
           </ul>
