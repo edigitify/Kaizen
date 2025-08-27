@@ -1,11 +1,11 @@
-import Robot from "../assets/Rob.png";
+import Robot from "../assets/RobMob.png";
 import RobotSmall from "../assets/RobMob.png";
 
 const ChooseSection = () => {
   return (
     <section className="bg-gray-50 py-12 px-4 md:px-16 flex flex-row md:flex-row items-center relative overflow-hidden">
       {/* Text */}
-      <div className="relative w-full md:w-1/2 px-4 md:px-6 py-6 rounded-lg z-10">
+      <div className="relative w-3/4  px-4 md:px-6 py-6 rounded-lg z-10 ">
         <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-4">
           WHY CHOOSE US
         </h2>
@@ -33,8 +33,8 @@ const ChooseSection = () => {
             </p>
           </li>
         </ul>
-        <button className="mt-6 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
-          GET A FREE IT HEALTH CHECK
+        <button className="mt-6 bg-[#B81616] hover:bg-red-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
+         Know More...
         </button>
       </div>
 
@@ -44,7 +44,7 @@ const ChooseSection = () => {
         <img
           src={Robot}
           alt="Robot"
-          className="hidden md:block max-h-[600px] w-auto object-contain"
+          className="relative hidden md:block max-h-[600px] w-auto object-contain"
         />
         {/* Mobile Image */}
         <img

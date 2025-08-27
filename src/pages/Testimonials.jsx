@@ -1,6 +1,6 @@
 import React from "react";
 import Camera from "../assets/Cam1.png";
-
+import { FaStar } from "react-icons/fa";
 const Testimonials = () => {
   return (
     <section className="w-full bg-white">
@@ -49,6 +49,11 @@ const Testimonials = () => {
               Working with Kaizen IT Solutions has been a fantastic experience.
               Their dedication to our success is evident in every interaction.
             </p>
+            <div className="flex space-x-1 mt-6">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <FaStar key={i} className="text-red-600" />
+              ))}
+            </div>
           </div>
         </div>
 
@@ -62,6 +67,11 @@ const Testimonials = () => {
                 The team at Kaizen IT Solutions provided exceptional service and
                 support.
               </p>
+              <div className="flex space-x-1 mt-6">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <FaStar key={i} className="text-red-600" />
+              ))}
+            </div>
             </div>
           </div>
 
@@ -70,12 +80,22 @@ const Testimonials = () => {
             <div className="rounded-lg shadow-md flex-1 bg-gray-100 p-6 text-left">
               <h3 className="text-lg mb-2">Exceptional IT Solutions!</h3>
               <p className="text-gray-700">They exceeded expectations!</p>
+              <div className="flex space-x-1 mt-6">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <FaStar key={i} className="text-red-600" />
+              ))}
+            </div>
             </div>
             <div className="rounded-lg shadow-md flex-1 bg-gray-100 p-6 text-left">
               <h3 className="text-lg mb-2">Professional Team</h3>
               <p className="text-gray-700">
                 Always responsive and reliable to work with.
               </p>
+              <div className="flex space-x-1 mt-6">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <FaStar key={i} className="text-red-600" />
+              ))}
+            </div>
             </div>
           </div>
 
@@ -88,6 +108,11 @@ const Testimonials = () => {
                 invaluable. They helped us enhance our cybersecurity and
                 streamline operations effectively.
               </p>
+              <div className="flex space-x-1 mt-6">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <FaStar key={i} className="text-red-600" />
+              ))}
+            </div>
             </div>
           </div>
         </div>

@@ -1,88 +1,160 @@
+import Background from "../assets/about2.jpg";
+import Image from "../assets/about1.jpg";
+import Image1 from "../assets/about3.jpg";
+import Image2 from "../assets/about4.jpg";
+import Image3 from "../assets/administrator (2).png";
+import Image4 from "../assets/deal (2).png";
+import Image5 from "../assets/Portfolio (2).png";
+import Image6 from "../assets/productivity (2).png";
+import Background1 from "../assets/AboutBack.png";
 const About = () => {
   return (
-   <div className="font-sans text-gray-800 mt-20">
+    <div className="font-sans text-gray-800 ">
       {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 px-6 md:px-20">
+      <section
+        className="relative  text-white py-40 px-6 md:px-20"
+        style={{
+          backgroundImage: `url(${Image2})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "50vh",
+        }}
+      >
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold">About Us</h1>
-          <p className="mt-4 text-lg">A Full Service Locksmith Since 1984</p>
-          <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg shadow-lg transition">
+          <p className="mt-4 text-lg">
+            Empowering Growth Through Intelligent IT Integration
+          </p>
+          <button className="mt-6 bg-gray-500 hover:bg-gray-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
             Call (451) 350-3992
           </button>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-16 px-6 md:px-20 grid md:grid-cols-2 gap-10 items-center">
-        <div className="grid grid-cols-2 gap-4">
-          <img src="https://via.placeholder.com/200" alt="" className="rounded-lg shadow" />
-          <img src="https://via.placeholder.com/200" alt="" className="rounded-lg shadow" />
-          <img src="https://via.placeholder.com/200" alt="" className="rounded-lg shadow" />
-          <img src="https://via.placeholder.com/200" alt="" className="rounded-lg shadow" />
-        </div>
-        <div>
-          <p className="uppercase text-sm text-gray-500 tracking-wider">Since 1984</p>
-          <h2 className="text-3xl font-bold mb-4">We Are A Full Service Locksmith Shop</h2>
-          <p className="mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.
-          </p>
-          <p className="font-semibold">
-            As licensed locksmith professionals, we know the value of safety and security.
-          </p>
+      <section className="min-h-1/2 flex items-center justify-center px-6 md:px-20 py-16"
+      style={{
+                    backgroundImage: `url(${Background1})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    
+                  }}
+      >
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Image Grid */}
+          <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto">
+            <div className="col-span-1">
+              <img
+                src={Image}
+                alt="Main showcase"
+                className="w-full h-48 object-cover rounded-lg shadow"
+              />
+            </div>
+            <img
+              src={Image1}
+              alt="Gallery 1"
+              className="w-full h-48 object-cover rounded-lg shadow"
+            />
+            <img
+              src={Image2}
+              alt="Gallery 2"
+              className="w-full h-48 object-cover rounded-lg shadow"
+            />
+            <div className="col-span-1">
+              <img
+                src={Background}
+                alt="Background showcase"
+                className="w-full h-48 object-cover rounded-lg shadow"
+              />
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="max-w-lg">
+            <h2 className="text-4xl font-extrabold mb-6 leading-snug">
+              Empowering Growth Through Intelligent IT Integration
+            </h2>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Kaizen is a leading system integrator, delivering end-to-end IT
+              solutions designed for modern business demands. We specialize in
+              building secure, scalable, and high-performing infrastructures by
+              integrating top-tier technologies from trusted vendors — tailored
+              to fit your unique operational needs.
+            </p>
+            <p className="font-medium text-gray-700 leading-relaxed">
+              Our mission is simple: to help growing businesses thrive by
+              aligning technology with their goals. From design to deployment
+              and ongoing management, we ensure your IT backbone is
+              future-ready, resilient, and built for success.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Services Section */}
       <section className="py-16 bg-gray-50 px-6 md:px-20 text-center">
-        <h2 className="text-2xl font-bold mb-10">What We Do</h2>
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <div className="bg-blue-900 text-white p-6 rounded-2xl shadow-lg">
-            <h3 className="text-lg font-semibold mb-2">Residential</h3>
-            <p className="text-sm mb-4">We provide full home locksmith services for safety and security.</p>
+        <h2 className="text-4xl font-bold mb-10">Why Choose Us?</h2>
+        <div className="grid md:grid-cols-4 gap-2 max-w-5xl mx-auto">
+          <div className="bg-white text-black p-4 rounded-2xl shadow-lg text-left">
+            <div className="p-2">
+              <img src={Image3} alt="Adm" className="h-14" />
+            </div>
+            <div className="">
+              <h3 className="text-m  font-bold mb-2 ">
+                Integrated IT Infrastructure
+              </h3>
+            </div>
+
+            <p className="text-sm mb-6">
+              We design and deploy secure, scalable, and high-performance IT
+              environments using best-in-class technologies.
+            </p>
             <button className="underline">Learn More</button>
           </div>
-          <div className="bg-yellow-800 text-white p-6 rounded-2xl shadow-lg">
-            <h3 className="text-lg font-semibold mb-2">Commercial</h3>
-            <p className="text-sm mb-4">Secure your business with our trusted locksmith solutions.</p>
+          <div className="bg-white text-black p-6 rounded-2xl shadow-lg text-left">
+            <div className="p-2">
+              <img src={Image6} alt="Adm" className="h-14 " />
+            </div>
+            <h3 className="text font-bold mb-2">
+              End-to-End System Integration
+            </h3>
+            <p className="text-sm mb-4">
+              From consultation to implementation, we connect hardware,
+              software, and networks into seamless, business-ready solutions.
+            </p>
             <button className="underline">Learn More</button>
           </div>
-          <div className="bg-orange-500 text-white p-6 rounded-2xl shadow-lg">
-            <h3 className="text-lg font-semibold mb-2">Automotive</h3>
-            <p className="text-sm mb-4">Car lockouts, key replacements, ignition repair and more.</p>
+          <div className="bg-white text-black p-6 rounded-2xl shadow-lg text-left">
+            <div className="p-2">
+              <img src={Image4} alt="Adm" className="h-14 " />
+            </div>
+            <h3 className="text font-semibold mb-2">
+              Managed IT Services & Support
+            </h3>
+            <p className="text-sm mb-4">
+              We offer ongoing monitoring, maintenance, and optimization to
+              ensure your systems run smoothly — today and tomorrow.
+            </p>
+            <button className="underline">Learn More</button>
+          </div>
+          <div className="bg-white text-black p-6 rounded-2xl shadow-lg text-left">
+            <div className="p-2">
+              <img src={Image5} alt="Adm" className="h-14" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2">
+              Managed IT Services & Support
+            </h3>
+            <p className="text-sm mb-4">
+              We offer ongoing monitoring, maintenance, and optimization to
+              ensure your systems run smoothly — today and tomorrow.
+            </p>
             <button className="underline">Learn More</button>
           </div>
         </div>
-        <button className="mt-8 bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 rounded-lg shadow">
-          Talk With A Locksmith
+        <button className="mt-8 bg-[#B81616] hover:bg-blue-800 text-white px-6 py-3 rounded-lg shadow">
+          Learn More
         </button>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-center text-white px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Home, Commercial, Auto, <br /> You Name It, We'll Be There.
-        </h2>
-        <p className="mb-6">Serving Your Local Area</p>
-        <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg shadow-lg">
-          Call (451) 350-3992
-        </button>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-10 px-6 md:px-20 grid md:grid-cols-3 gap-6 text-center md:text-left">
-        <div>
-          <h4 className="font-bold mb-2">Head Office</h4>
-          <p>136 Botsford Valleys Apt. 264</p>
-        </div>
-        <div>
-          <h4 className="font-bold mb-2">Call Us</h4>
-          <p>(451) 321-3922</p>
-        </div>
-        <div>
-          <h4 className="font-bold mb-2">Email Us</h4>
-          <p>info@gmail.com</p>
-        </div>
-      </footer>
     </div>
   );
 };

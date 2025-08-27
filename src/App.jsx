@@ -6,6 +6,9 @@ import Blogs from "./components/Blogs";
 import Contact from "./components/Contact";
 import Services from "./components/Services";
 import Footer from "./pages/Footer";
+import Product from "./components/Product";
+import Solutions from "./components/Solutions";
+import Support from "./components/Support";
 function App() {
   return (
     <Router>
@@ -14,11 +17,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/itservices" element={<Services />} />
           <Route path="/blogs" element={<Blogs />} />
-          {/* <Route path="/transparent" element={<Transperent />} />
-          <Route path="/opaque" element={<Opake />} />
-          <Route path="/frosted" element={<Frosted />} /> */}
+          <Route path="/product" element={<Product />} />
+          <Route path="/itsolutions" element={<Solutions />} />
+          <Route path="/itsupport" element={<Support />} />
           <Route path="/contact" element={<Contact />} />
           {/* <Route path="/partner" element={<Partner />} /> */}
         </Routes>

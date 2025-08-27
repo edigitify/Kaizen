@@ -1,91 +1,152 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react"; 
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import Logo from "../assets/Logo.png";
 import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+      }`}
+    >
+      <div className="max-full mx-auto px-20 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="h-20 w-[200px] flex items-center justify-center overflow-hidden">
-          <Link to="/">
-           <img
-            src={Logo}
-            alt="Kaizen IT Solutions"
-            className="h-20 w-auto object-contain translate-y-2 md:h-24 lg:h-24"
-          />
-          </Link>
-         
-        </div>
+       <div className="h-20 w-[200px] flex items-center justify-start overflow-hidden">
+  <NavLink to="/">
+    <img
+      src={Logo}
+      alt="Kaizen IT Solutions"
+      className="h-20 w-auto object-contain translate-y-2 md:h-24 lg:h-24"
+    />
+  </NavLink>
+</div>
+
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-10 text-sm font-medium">
           <li>
             <NavLink
-             to="/"
+              to="/"
               className={({ isActive }) =>
                 `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
                   isActive
                     ? "text-red-700 border-b-2 border-red-700"
-                    : "text-red-400 border-b-2 border-transparent"
+                    : "text-black border-b-2 border-transparent"
                 }`
               }
             >
-              HOME
+              Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" className={({ isActive }) =>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
                 `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
                   isActive
                     ? "text-red-700 border-b-2 border-red-700"
-                    : "text-red-400 border-b-2 border-transparent"
+                    : "text-black border-b-2 border-transparent"
                 }`
-              }>
-              ABOUT
+              }
+            >
+              About Us
             </NavLink>
           </li>
           <li>
-            <NavLink to="/services" className={({ isActive }) =>
+            <NavLink
+              to="/itsolutions"
+              className={({ isActive }) =>
                 `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
                   isActive
                     ? "text-red-700 border-b-2 border-red-700"
-                    : "text-red-400 border-b-2 border-transparent"
+                    : "text-black border-b-2 border-transparent"
                 }`
-              }>
-              SERVICES
+              }
+            >
+              IT Solutions
             </NavLink>
           </li>
           <li>
-            <NavLink to="/blogs" className={({ isActive }) =>
+            <NavLink
+              to="/itservices"
+              className={({ isActive }) =>
                 `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
                   isActive
                     ? "text-red-700 border-b-2 border-red-700"
-                    : "text-red-400 border-b-2 border-transparent"
+                    : "text-black border-b-2 border-transparent"
                 }`
-              }>
-              BLOGS
+              }
+            >
+              IT Services
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" className={({ isActive }) =>
+            <NavLink
+              to="/product"
+              className={({ isActive }) =>
                 `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
                   isActive
                     ? "text-red-700 border-b-2 border-red-700"
-                    : "text-red-400 border-b-2 border-transparent"
+                    : "text-black border-b-2 border-transparent"
                 }`
-              }>
-              CONTACT
+              }
+            >
+              Product
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/itsupport"
+              className={({ isActive }) =>
+                `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
+                  isActive
+                    ? "text-red-700 border-b-2 border-red-700"
+                    : "text-black border-b-2 border-transparent"
+                }`
+              }
+            >
+              IT Support
+            </NavLink>
+          </li>
+          {/* <li>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
+                  isActive
+                    ? "text-red-700 border-b-2 border-red-700"
+                    : "text-black border-b-2 border-transparent"
+                }`
+              }
+            >
+              Blogs
+            </NavLink>
+          </li> */}
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
+                  isActive
+                    ? "text-red-700 border-b-2 border-red-700"
+                    : "text-black border-b-2 border-transparent"
+                }`
+              }
+            >
+              Contact Us
             </NavLink>
           </li>
         </ul>
-
-        {/* Quote Button */}
-        <button className="hidden md:block bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700 transition">
-          GET A QUOTE
-        </button>
 
         {/* Mobile Menu Button */}
         <button
@@ -105,35 +166,45 @@ const Navbar = () => {
                 to="/"
                 className="text-red-600 border-b-2 border-red-600 pb-1"
               >
-                HOME
+                Home
               </NavLink>
             </li>
             <li>
               <NavLink to="/about" className="hover:text-red-600">
-                ABOUT
+                About Us
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className="hover:text-red-600">
-                SERVICES
+              <NavLink to="/itsolution" className="hover:text-red-600">
+                IT Solution
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/itservices" className="hover:text-red-600">
+                IT Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/product" className="hover:text-red-600">
+                Product
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/itsupport" className="hover:text-red-600">
+                IT Support
               </NavLink>
             </li>
             <li>
               <NavLink to="/blogs" className="hover:text-red-600">
-                BLOGS
+                Blogs
               </NavLink>
             </li>
             <li>
               <NavLink to="/contact" className="hover:text-red-600">
-                CONTACT
+                Contact Us
               </NavLink>
             </li>
           </ul>
-          <div className="px-4 pb-4">
-            <button className="w-full bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">
-              GET A QUOTE
-            </button>
-          </div>
         </div>
       )}
     </nav>

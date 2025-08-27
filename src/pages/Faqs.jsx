@@ -1,13 +1,29 @@
 import { useState } from "react";
 import Background from "../assets/Background.jpg";
 const faqs = [
-  { question: 'What does "Managed IT Services" include?', answer: "Managed IT Services typically include 24/7 monitoring, helpdesk support, cloud solutions, backups, and IT strategy consulting." },
-  { question: "How is Kaizen IT Solutions different from other IT providers?", answer: "Kaizen IT Solutions focuses on personalized IT strategies, proactive support, and long-term partnerships, unlike providers that only offer reactive fixes." },
-  { question: "Is my business too small to need managed IT?", answer: "No business is too small. Managed IT ensures efficiency, security, and cost savings regardless of company size." },
-  { question: "What kind of cybersecurity solutions do you offer?", answer: "We provide firewalls, endpoint protection, phishing prevention, vulnerability assessments, and compliance consulting." },
+  {
+    question: 'What does "Managed IT Services" include?',
+    answer:
+      "Managed IT Services typically include 24/7 monitoring, helpdesk support, cloud solutions, backups, and IT strategy consulting.",
+  },
+  {
+    question: "How is Kaizen IT Solutions different from other IT providers?",
+    answer:
+      "Kaizen IT Solutions focuses on personalized IT strategies, proactive support, and long-term partnerships, unlike providers that only offer reactive fixes.",
+  },
+  {
+    question: "Is my business too small to need managed IT?",
+    answer:
+      "No business is too small. Managed IT ensures efficiency, security, and cost savings regardless of company size.",
+  },
+  {
+    question: "What kind of cybersecurity solutions do you offer?",
+    answer:
+      "We provide firewalls, endpoint protection, phishing prevention, vulnerability assessments, and compliance consulting.",
+  },
 ];
 
-const  Faqs = () => {
+const Faqs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -16,34 +32,43 @@ const  Faqs = () => {
 
   return (
     <>
-    <div className="max-w-3/4 mx-auto px-4 py-10 text-center">
-      <h2 className="text-2xl font-semibold text-center mb-6">FAQs</h2>
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className={`rounded-lg cursor-pointer p-4 transition-colors ${
-              activeIndex === index ? "bg-red-700 text-white" : "bg-gray-200 text-black"
-            }`}
-            onClick={() => toggleFAQ(index)}
-          >
-            <h3 className="text-lg font-medium">{faq.question}</h3>
-            {activeIndex === index && (
-              <p className="mt-2 text-sm">{faq.answer}</p>
-            )}
-          </div>
-        ))}
+      <div className="max-w-3/4 mx-auto px-4 py-10 text-center">
+        <h2 className="text-2xl font-semibold text-center mb-6">FAQs</h2>
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`rounded-lg cursor-pointer p-4 transition-colors ${
+                activeIndex === index
+                  ? "bg-red-700 text-white"
+                  : "bg-gray-200 text-black"
+              }`}
+              onClick={() => toggleFAQ(index)}
+            >
+              <h3 className="text-lg font-medium">{faq.question}</h3>
+              {activeIndex === index && (
+                <p className="mt-2 text-sm">{faq.answer}</p>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  <div className="w-full">
-  <img 
-    src={Background} 
-    alt="Background" 
-    className="h-60 w-screen mt-10 mb-10" 
-  />
-</div>
+      <div className="relative w-full">
+        <img
+          src={Background}
+          alt="Background"
+          className="h-60 w-screen mt-10 mb-10 object-cover"
+        />
+
+        {/* Button ko center me rakhne ke liye absolute */}
+        <button className="absolute inset-0 flex items-center justify-center">
+          <span className="bg-black text-white px-12 py-4 text-2xl rounded-lg">
+            let’s get started!
+          </span>
+        </button>
+      </div>
     </>
   );
-}
+};
 
 export default Faqs;
