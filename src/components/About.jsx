@@ -2,10 +2,10 @@ import Background from "../assets/about2.jpg";
 import Image from "../assets/about1.jpg";
 import Image1 from "../assets/about3.jpg";
 import Image2 from "../assets/about4.jpg";
-import Image3 from "../assets/administrator (2).png";
-import Image4 from "../assets/deal (2).png";
-import Image5 from "../assets/Portfolio (2).png";
-import Image6 from "../assets/productivity (2).png";
+import Image3 from "../assets/1.png";
+import Image4 from "../assets/2.png";
+import Image5 from "../assets/3.png";
+import Image6 from "../assets/4.png";
 import Background1 from "../assets/AboutBack.png";
 const About = () => {
   return (
