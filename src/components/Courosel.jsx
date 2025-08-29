@@ -6,13 +6,13 @@ import "swiper/css/autoplay";
 // Import images
 import Image9 from "../assets/Image/25.png";
 import Image11 from "../assets/Image/26.png";
-import Image13 from "../assets/image/27.png";
-import Image14 from "../assets/image/28.png";
-import Image15 from "../assets/image/29.png";
-import Image16 from "../assets/image/30.png";
-import Image17 from "../assets/image/31.png";
-import Image18 from "../assets/image/32.png";
-import Image19 from "../assets/image/33.png";
+import Image13 from "../assets/Image/27.png";
+import Image14 from "../assets/Image/28.png";
+import Image15 from "../assets/Image/29.png";
+import Image16 from "../assets/Image/30.png";
+import Image17 from "../assets/Image/31.png";
+import Image18 from "../assets/Image/32.png";
+import Image19 from "../assets/Image/33.png";
 
 // Logos array
 const logos = [
