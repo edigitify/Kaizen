@@ -118,20 +118,7 @@ const Navbar = () => {
               IT Support
             </NavLink>
           </li>
-          {/* <li>
-            <NavLink
-              to="/blogs"
-              className={({ isActive }) =>
-                `font-medium text-sm lg:text-base hover:text-red-200 transition-colors ${
-                  isActive
-                    ? "text-red-700 border-b-2 border-red-700"
-                    : "text-black border-b-2 border-transparent"
-                }`
-              }
-            >
-              Blogs
-            </NavLink>
-          </li> */}
+          
           <li>
             <NavLink
               to="/contact"
@@ -175,7 +162,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/itsolution" className="hover:text-red-600">
+              <NavLink to="/itsolutions" className="hover:text-red-600">
                 IT Solution
               </NavLink>
             </li>
@@ -194,11 +181,7 @@ const Navbar = () => {
                 IT Support
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/blogs" className="hover:text-red-600">
-                Blogs
-              </NavLink>
-            </li>
+            
             <li>
               <NavLink to="/contact" className="hover:text-red-600">
                 Contact Us
