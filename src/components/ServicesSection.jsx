@@ -1,26 +1,41 @@
-import { Monitor, Palette, Workflow, Shield, Headphones } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import Background from "../assets/Back.png";
+import Image from "../assets/Image/20.png";
+import Image1 from "../assets/Image/21.png";
+import Image2 from "../assets/Image/22.png";
 const ServicesSection = () => {
+ const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/itservices");
+    window.scrollTo(0, 0); 
+  };
   const services = [
-    {
-      title: "Consulting",
-      description:
-        "Custom applications built to solve business challenges with speed, scalability, and performance.",
-      icon: <Monitor className="w-10 h-10 text-[#B81616]" />,
-    },
-    {
-      title: "Designing",
-      description:
-        "Secure, scalable, and cost-efficient cloud infrastructure tailored to your needs.",
-      icon: <Palette className="w-10 h-10 text-[#B81616]" />,
-    },
-    {
-      title: "Implementation",
-      description:
-        "Intelligent AI-driven solutions to streamline operations and enhance decision-making.",
-      icon: <Workflow className="w-10 h-10 text-[#B81616]" />,
-    },
-  ];
+  {
+        title: "IT SERVICES & CONSULTING",
+        description: `Expert guidance to align your IT strategy with business
+  goals and future-proof your tech landscape.
+  From audits to roadmap development, we help you make
+  informed IT investments.`,
+        icon: <img src={Image} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+      },
+      {
+        title: "IT SOLUTION DESIGN & IMPLEMENTATION",
+        description: `Custom IT solutions tailored to your specific business
+  challenges and operational goals.
+  We plan, deploy, and integrate systems that drive
+  performance and productivity.`,
+        icon: <img src={Image1} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+      },
+      {
+        title: "SUPPORT SERVICES",
+        description: `Reliable technical support to ensure your IT systems run
+  smoothly without interruptions.
+  We offer on-site and remote assistance to resolve
+  issues promptly and efficiently.`,
+        icon: <img src={Image2} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+      },
+];
 
   return (
     <section className="min-h-96 bg-[#B81616] text-black px-6 py-10 mt-20"
@@ -33,8 +48,8 @@ const ServicesSection = () => {
     >
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h1 className="text-5xl font-bold tracking-tight text-black">
-          IT <span className="text-white">Services</span>
+        <h1 className="text-5xl font-bold tracking-tight text-white">
+         OUR <span className="text-white">Services</span>
         </h1>
         <p className="mt-4 text-lg text-white">
           IT Services which enable organizations reduce TCO, increase business
@@ -58,7 +73,7 @@ const ServicesSection = () => {
         </div>
       </div>
       <div className=" flex justify-center mt-10">
-  <button className="h-10 flex justify-center items-center px-6 rounded-lg shadow-md bg-gray-200">
+  <button className="h-10 flex justify-center items-center px-6 rounded-lg shadow-md bg-gray-200" onClick={handleClick}>
     See More...
   </button>
 </div>

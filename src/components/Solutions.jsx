@@ -5,7 +5,6 @@ import networkImg from "../assets/Solution/2.jpg";
 import Unifo from "../assets/Solution/3.jpg";
 import Itinfo from "../assets/Solution/4.jpg";
 import Evn from "../assets/Solution/5.jpg";
-import Background from "../assets/Solution/6.jpeg";
 // ✅ Import Lucide icons
 import {
   Shield,
@@ -15,98 +14,92 @@ import {
   Server,
   Phone,
   Cable,
+  HardDrive,
+  Database,
+  Video,
 } from "lucide-react";
 
 const Solutions = () => {
   return (
     <div className="font-sans bg-white">
       {/* Hero Section */}
-      <section
-        className="relative flex flex-col items-center justify-center text-center text-black px-6 h-96 "
-        // style={{
-        //   backgroundImage: `url(${Background})`,
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        //   backgroundRepeat: "no-repeat",
-        //   height: "50vh",
-        // }}
-      >
-        <div className="bg-white/50 absolute inset-0"></div>{" "}
-        {/* overlay (optional) */}
+      <section className="relative flex flex-col items-center justify-center text-center text-black px-6 h-96 ">
+        <div className="bg-white/50 absolute inset-0"></div>
         <div className="relative z-10">
-          <h1 className="text-3xl md:text-5xl font-bold">IT Solutions</h1>
+          <h1 className="text-3xl md:text-5xl font-bold">OUR SOLUTIONS</h1>
           <p className="mt-4 max-w-2xl mx-auto text-black text-base md:text-lg">
-            Comprehensive IT solutions that deliver security, performance, cost
-            savings, and flexibility.
+            Smart Technology. Scalable Infrastructure. Seamless Integration.  
+            Empowering your business with tailored IT solutions designed for
+            performance, security, and growth.
           </p>
         </div>
       </section>
 
       {/* Intro Text */}
-      <section className="bg-[#B81616] text-black text-center py-16 px-6 md:px-20 text-base md:text-lg">
+      <section className="bg-[#B81616] text-center py-16 px-6 md:px-20 text-base md:text-lg">
         <p className="max-w-6xl mx-auto leading-relaxed text-white">
-          In today’s dynamic business environment, information technology is an
-          integral part of every organization. It forms the foundation for all
-          current operations and future growth. Kaizen Networks aims to address
-          customers’ business needs by providing customized solutions with a
-          strong focus on security, performance, and flexibility.
+          In today’s dynamic business environment, technology forms the backbone
+          of every successful organization. At Kaizen Networks, we deliver
+          customized IT solutions built on security, scalability, and
+          performance — enabling your business to operate smarter, safer, and
+          faster.
         </p>
       </section>
 
-      {/* Cybersecurity */}
+      {/* Backup Solutions */}
       <SolutionSection
-        title="Cybersecurity Solutions"
-        description="Protect your business from threats with advanced cybersecurity solutions designed to safeguard, prevent, and recover from cyberattacks."
+        title="Backup Solutions"
+        description="Reliable and automated backup systems that protect your data and ensure business continuity in the event of failures or disasters."
         image={cyberImg}
         features={[
           {
             icon: <Shield className="w-6 h-6 text-white" />,
-            title: "Next-Generation Firewall (NGFW)",
-            text: "Advanced firewalls that intelligently filter and monitor network traffic to secure your organization.",
+            title: "Data Protection",
+            text: "Automated backup systems that safeguard business-critical files and applications.",
           },
           {
             icon: <Search className="w-6 h-6 text-white" />,
-            title: "Advanced Malware Protection (AMP)",
-            text: "Continuous monitoring and detection to defend against evolving malicious threats.",
+            title: "Disaster Recovery",
+            text: "Rapid restoration options to minimize downtime and ensure smooth recovery.",
           },
         ]}
       />
 
-      {/* Networking */}
+      {/* Networking & Security */}
       <SolutionSection
-        title="Networking Solutions"
-        description="Build high-performance networks that provide stability, security, and seamless connectivity."
+        title="Network & Security"
+        description="Secure, scalable, and efficient networks designed to withstand evolving cyber threats and ensure seamless connectivity."
         image={networkImg}
         reverse
         features={[
           {
             icon: <Router className="w-6 h-6 text-white" />,
             title: "Routers & Switches",
-            text: "Reliable devices that connect and manage communication between computers, servers, and peripherals.",
+            text: "High-performance devices for fast and reliable data transfer across your infrastructure.",
           },
           {
             icon: <Wifi className="w-6 h-6 text-white" />,
             title: "Enterprise Mobility",
-            text: "Enable secure and seamless communication across internal and external networks.",
+            text: "Secure access for employees across devices, locations, and networks.",
           },
         ]}
       />
 
-      {/* Datacenter */}
+      {/* Cloud & Virtualization */}
       <SolutionSection
-        title="Data Center Solutions"
-        description="Enhance collaboration, improve user experience, and increase productivity with secure and reliable data center solutions."
+        title="Cloud & Virtualization"
+        description="Leverage the power of cloud and virtual systems to reduce IT costs, improve flexibility, and enable scalability."
         image={Unifo}
         features={[
           {
             icon: <Server className="w-6 h-6 text-white" />,
-            title: "Collaboration Tools",
-            text: "Empowering teams with secure platforms to connect, communicate, and collaborate effectively.",
+            title: "Virtual Servers",
+            text: "Run multiple environments on a single machine for efficiency and cost savings.",
           },
           {
             icon: <Phone className="w-6 h-6 text-white" />,
-            title: "IP Telephony",
-            text: "Cost-effective communication systems that simplify processes, save expenses, and boost productivity.",
+            title: "Cloud Collaboration",
+            text: "Empower teams with secure cloud platforms for communication and productivity.",
           },
         ]}
       />
@@ -114,38 +107,116 @@ const Solutions = () => {
       {/* IT Infrastructure */}
       <SolutionSection
         title="IT Infrastructure"
-        description="A well-optimized IT infrastructure ensures reliable operations today and provides a solid foundation for future growth."
+        description="Robust, scalable, and future-ready IT infrastructures designed for seamless business operations."
         image={Itinfo}
         reverse
         features={[
           {
             icon: <Server className="w-6 h-6 text-white" />,
-            title: "Server Racks",
-            text: "Secure and efficient solutions to host multiple pieces of network and server equipment in one location.",
+            title: "Servers & Racks",
+            text: "Efficient solutions for housing, securing, and managing IT hardware.",
           },
           {
             icon: <Cable className="w-6 h-6 text-white" />,
             title: "Structured Cabling",
-            text: "Standardized cabling solutions that enhance system reliability, interoperability, and scalability.",
+            text: "Standardized cabling systems to improve reliability and scalability.",
           },
         ]}
       />
 
-      {/* ELV */}
+      {/* ELV Solutions */}
       <SolutionSection
-        title="ELV (Extra Low Voltage) Solutions"
-        description="Advanced ELV solutions to strengthen safety, communication, and monitoring systems within your organization."
+        title="ELV Solutions"
+        description="Extra-Low Voltage (ELV) solutions that improve safety, communication, and automation in modern workplaces."
         image={Evn}
         features={[
           {
             icon: <Shield className="w-6 h-6 text-white" />,
-            title: "Access Control & Surveillance",
-            text: "Ensure safety with reliable access control and modern surveillance systems.",
+            title: "Access Control",
+            text: "Protect facilities with smart access control and integrated surveillance.",
           },
           {
             icon: <Search className="w-6 h-6 text-white" />,
             title: "System Integration",
-            text: "Seamless integration of ELV systems for efficient monitoring and control.",
+            text: "Centralized monitoring and control for multiple ELV systems.",
+          },
+        ]}
+      />
+
+      {/* Server & Storage */}
+      <SolutionSection
+        title="Server & Storage"
+        description="High-performance servers and storage solutions to support business growth and manage expanding data needs."
+        image={Itinfo}
+        reverse
+        features={[
+          {
+            icon: <HardDrive className="w-6 h-6 text-white" />,
+            title: "Enterprise Storage",
+            text: "Scalable storage systems built for speed, security, and accessibility.",
+          },
+          {
+            icon: <Database className="w-6 h-6 text-white" />,
+            title: "Server Solutions",
+            text: "Reliable servers designed for high availability and optimized performance.",
+          },
+        ]}
+      />
+
+      {/* Data Center Solutions */}
+      <SolutionSection
+        title="Data Center Solutions"
+        description="Design and implementation of high-availability, energy-efficient, and secure data centers tailored to your business scale."
+        image={Evn}
+        features={[
+          {
+            icon: <Server className="w-6 h-6 text-white" />,
+            title: "High Availability",
+            text: "Infrastructure designed to eliminate downtime and ensure business continuity.",
+          },
+          {
+            icon: <Shield className="w-6 h-6 text-white" />,
+            title: "Data Security",
+            text: "Layered protection against cyber threats and unauthorized access.",
+          },
+        ]}
+      />
+
+      {/* Structured Cabling */}
+      <SolutionSection
+        title="Structured Cabling"
+        description="Organized, future-proof cabling infrastructure that supports high-speed data and communication systems."
+        image={Itinfo}
+        reverse
+        features={[
+          {
+            icon: <Cable className="w-6 h-6 text-white" />,
+            title: "Scalable Design",
+            text: "Flexible cabling systems built to adapt to future IT requirements.",
+          },
+          {
+            icon: <Server className="w-6 h-6 text-white" />,
+            title: "Reliable Performance",
+            text: "Improved connectivity and minimized downtime through standardized solutions.",
+          },
+        ]}
+      />
+
+      {/* Video Surveillance */}
+      <SolutionSection
+        title="Video Surveillance"
+        description="Intelligent surveillance systems for real-time monitoring, incident detection, and advanced analytics."
+        image={Evn}
+        features={[
+          {
+            icon: <Video className="w-6 h-6 text-white" />,
+            title: "Smart Cameras",
+            text: "AI-powered video monitoring for improved safety and efficiency.",
+          },
+          {
+            icon: <Search className="w-6 h-6 text-white" />,
+            title: "Centralized Monitoring",
+            text: "Seamlessly integrate surveillance into one secure management platform.",
           },
         ]}
       />

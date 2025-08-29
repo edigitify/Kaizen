@@ -1,36 +1,52 @@
-import { Monitor, Palette, Workflow, Shield, Headphones } from "lucide-react";
+import Image from "../assets/Image/20.png";
+import Image1 from "../assets/Image/21.png";
+import Image2 from "../assets/Image/22.png";
+import Image3 from "../assets/Image/23.png";
+import Image4 from "../assets/Image/24.png";
 
 const Services = () => {
+  
   const services = [
     {
-      title: "Consulting",
-      description:
-        "Custom applications built to solve business challenges with speed, scalability, and performance.",
-      icon: <Monitor className="w-10 h-10 text-blue-400" />,
+      title: "IT SERVICES & CONSULTING",
+      description: `Expert guidance to align your IT strategy with business
+goals and future-proof your tech landscape.
+From audits to roadmap development, we help you make
+informed IT investments.`,
+      icon: <img src={Image} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
     },
     {
-      title: "Designing",
-      description:
-        "Secure, scalable, and cost-efficient cloud infrastructure tailored to your needs.",
-      icon: <Palette className="w-10 h-10 text-pink-400" />,
+      title: "IT SOLUTION DESIGN & IMPLEMENTATION",
+      description: `Custom IT solutions tailored to your specific business
+challenges and operational goals.
+We plan, deploy, and integrate systems that drive
+performance and productivity.`,
+      icon: <img src={Image1} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
     },
     {
-      title: "Implementation",
-      description:
-        "Intelligent AI-driven solutions to streamline operations and enhance decision-making.",
-      icon: <Workflow className="w-10 h-10 text-green-400" />,
+      title: "SUPPORT SERVICES",
+      description: `Reliable technical support to ensure your IT systems run
+smoothly without interruptions.
+We offer on-site and remote assistance to resolve
+issues promptly and efficiently.`,
+      icon: <img src={Image2} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
     },
     {
-      title: "Managed Services",
-      description:
-        "End-to-end security services to protect your data, networks, and business assets.",
-      icon: <Shield className="w-10 h-10 text-yellow-400" />,
+      title: "IT NETWORK OPERATIONS",
+      description: `24/7 monitoring and management of your IT networks
+to maintain optimal uptime and security.
+Kaizen ensures your critical operations remain
+connected and protected.`,
+      icon: <img src={Image3} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
     },
+
     {
-      title: "24/7 Support",
-      description:
-        "Reliable technical support around the clock to keep your systems running smoothly.",
-      icon: <Headphones className="w-10 h-10 text-purple-400" />,
+      title: "MANAGED SERVICES",
+      description: `End-to-end IT management solutions that let you
+focus on your core business.
+From infrastructure monitoring to regular
+maintenance, we handle your tech backbone.`,
+      icon: <img src={Image4} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
     },
   ];
 
@@ -38,12 +54,11 @@ const Services = () => {
     <section className="min-h-screen bg-white text-black px-6 py-16 mt-20">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h1 className="text-5xl font-bold tracking-tight text-black">
-          IT <span className="text-red-700">Services</span>
+        <h1 className="text-5xl font-bold tracking-tight text-[#B81616]">
+          OUR <span className="text-[#B81616]"> SERVICES</span>
         </h1>
         <p className="mt-4 text-lg text-black">
-          IT Services which enable organizations reduce TCO, increase business
-          value & accelerate ROI
+          Technology that moves your business forward.
         </p>
 
         {/* Intro Text */}
@@ -72,13 +87,17 @@ const Services = () => {
                 {service.title}
               </h3>
               <p className="mt-3 text-black">{service.description}</p>
-             
+
               <div className="mt-8 ">
-                <button className="bg-[#B81616] w-full h-10 rounded-xl text-white text-xl">Get In Toch</button>
+                <button
+                  className="bg-[#B81616] w-full h-10 rounded-xl text-white text-xl "
+                  
+                >
+                  Get In Toch
+                </button>
               </div>
             </div>
           ))}
-           
         </div>
       </div>
     </section>
