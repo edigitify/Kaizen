@@ -13,7 +13,7 @@ const Services = () => {
 goals and future-proof your tech landscape.
 From audits to roadmap development, we help you make
 informed IT investments.`,
-      icon: <img src={Image} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+      icon: <img src={Image} className="w-20 h-20 rounded-xl bg-[#B81616] p-2" />,
     },
     {
       title: "IT SOLUTION DESIGN & IMPLEMENTATION",
@@ -21,7 +21,7 @@ informed IT investments.`,
 challenges and operational goals.
 We plan, deploy, and integrate systems that drive
 performance and productivity.`,
-      icon: <img src={Image1} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+      icon: <img src={Image1} className="w-20 h-20 rounded-xl bg-[#B81616] p-2" />,
     },
     {
       title: "SUPPORT SERVICES",
@@ -29,7 +29,7 @@ performance and productivity.`,
 smoothly without interruptions.
 We offer on-site and remote assistance to resolve
 issues promptly and efficiently.`,
-      icon: <img src={Image2} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+      icon: <img src={Image2} className="w-20 h-20 rounded-xl bg-[#B81616] p-2" />,
     },
     {
       title: "IT NETWORK OPERATIONS",
@@ -37,7 +37,7 @@ issues promptly and efficiently.`,
 to maintain optimal uptime and security.
 Kaizen ensures your critical operations remain
 connected and protected.`,
-      icon: <img src={Image3} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+      icon: <img src={Image3} className="w-20 h-20 rounded-xl bg-[#B81616] p-2" />,
     },
 
     {
@@ -46,7 +46,7 @@ connected and protected.`,
 focus on your core business.
 From infrastructure monitoring to regular
 maintenance, we handle your tech backbone.`,
-      icon: <img src={Image4} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+      icon: <img src={Image4} className="w-20 h-20 rounded-xl bg-[#B81616] p-2" />,
     },
   ];
 
@@ -55,7 +55,7 @@ maintenance, we handle your tech backbone.`,
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <h1 className="text-5xl font-bold tracking-tight text-[#B81616]">
-          OUR <span className="text-[#B81616]"> SERVICES</span>
+          Our <span className="text-[#B81616]"> Services</span>
         </h1>
         <p className="mt-4 text-lg text-black">
           Technology that moves your business forward.

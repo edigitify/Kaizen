@@ -1,5 +1,5 @@
 import { FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="bg-[#B81616] text-white px-6 md:px-16 lg:px-24 py-12">
@@ -8,11 +8,28 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-4">Solutions</h3>
           <ul className="space-y-2 text-white text-sm">
-            <li>Cybersecurity Solutions</li>
-            <li>Networking Solutions</li>
-            <li>Data Center Solutions</li>
-            <li>IT Infrastructure </li>
-            <li>ELV (Extra Low Voltage) Solutions</li>
+            <li>
+              {" "}
+              <Link to="/itsolutions">Cybersecurity Solutions</Link>{" "}
+            </li>
+            <li>
+              {" "}
+              <Link to="/itsolutions">Networking Solutions</Link>{" "}
+            </li>
+            <li>
+              {" "}
+              <Link to="/itsolutions">Data Center Solutions</Link>{" "}
+            </li>
+            <li>
+              {" "}
+              <Link to="/itsolutions">IT Infrastructure</Link>{" "}
+            </li>
+            <li>
+              {" "}
+              <Link to="/itsolutions">
+                ELV (Extra Low Voltage) Solutions
+              </Link>{" "}
+            </li>
           </ul>
         </div>
 
@@ -20,13 +37,26 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-4">Services</h3>
           <ul className="space-y-2 text-white text-sm">
-            <li>IT Consulting</li>
-            <li>IT Solution Design</li>
-            <li>IT Implementation</li>
-            <li>IT Support Service</li>
-            <li>IT Network Operations</li>
-            <li>IT Managed Services</li>
-            
+            <li>
+              {" "}
+              <Link to="/itservices"> IT Consulting</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/itservices">IT Solution Design</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/itservices">IT Implementation</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/itservices">IT Support Service</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/itservices">IT Network Operations</Link>
+            </li>
           </ul>
         </div>
 
@@ -34,14 +64,17 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-4">Company</h3>
           <ul className="space-y-2 text-white text-sm">
-            <li>About Us</li>
-            
-           
-          
-            <li>Contact Us</li>
-            <li>Product</li>
-           
-           
+            <li>
+              {" "}
+              <Link to="/about">About Us</Link>{" "}
+            </li>
+
+            <li>
+              <Link to="/contact">Contact Us</Link>{" "}
+            </li>
+            <li>
+              <Link to="/product">Product</Link>{" "}
+            </li>
           </ul>
         </div>
 
@@ -66,8 +99,6 @@ export default function Footer() {
             Email: info@kaizennetworks.com
           </p>
         </div>
-
-       
       </div>
 
       {/* Bottom */}

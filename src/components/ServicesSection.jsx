@@ -17,7 +17,7 @@ const ServicesSection = () => {
   goals and future-proof your tech landscape.
   From audits to roadmap development, we help you make
   informed IT investments.`,
-        icon: <img src={Image} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+        icon: <img src={Image} className="w-20 h-20 rounded-xl bg-[#B81616] p-2" />,
       },
       {
         title: "IT SOLUTION DESIGN & IMPLEMENTATION",
@@ -25,7 +25,7 @@ const ServicesSection = () => {
   challenges and operational goals.
   We plan, deploy, and integrate systems that drive
   performance and productivity.`,
-        icon: <img src={Image1} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+        icon: <img src={Image1} className="w-20 h-20 rounded-xl bg-[#B81616] p-2" />,
       },
       {
         title: "SUPPORT SERVICES",
@@ -33,7 +33,7 @@ const ServicesSection = () => {
   smoothly without interruptions.
   We offer on-site and remote assistance to resolve
   issues promptly and efficiently.`,
-        icon: <img src={Image2} className="w-20 h-20 rounded-xl bg-[#B81616]" />,
+        icon: <img src={Image2} className="w-20 h-20 rounded-xl bg-[#B81616] p-2" />,
       },
 ];
 
@@ -49,7 +49,7 @@ const ServicesSection = () => {
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <h1 className="text-5xl font-bold tracking-tight text-white">
-         OUR <span className="text-white">Services</span>
+         Our <span className="text-white">Services</span>
         </h1>
         <p className="mt-4 text-lg text-white">
           IT Services which enable organizations reduce TCO, increase business
@@ -74,7 +74,7 @@ const ServicesSection = () => {
       </div>
       <div className=" flex justify-center mt-10">
   <button className="h-10 flex justify-center items-center px-6 rounded-lg shadow-md bg-gray-200" onClick={handleClick}>
-    See More...
+    See More
   </button>
 </div>
 

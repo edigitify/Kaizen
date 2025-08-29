@@ -33,7 +33,7 @@ const Courosel = () => {
       {/* Heading */}
       <div className="text-center mb-6">
         <h1 className="text-2xl md:text-4xl font-bold text-red-700">
-          OUR PARTNERS
+          Our Partners
         </h1>
       </div>
 

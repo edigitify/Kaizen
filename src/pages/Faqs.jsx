@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Background from "../assets/Background.jpg";
+import { useNavigate } from "react-router-dom";
 const faqs = [
   {
     question: 'What does "Managed IT Services" include?',
@@ -25,7 +26,10 @@ const faqs = [
 
 const Faqs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
-
+  const nevigate=useNavigate();
+  const handleClick=()=>{
+    nevigate("/contact");
+  }
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -62,7 +66,7 @@ const Faqs = () => {
 
         {/* Button ko center me rakhne ke liye absolute */}
         <button className="absolute inset-0 flex items-center justify-center">
-          <span className="bg-black text-white px-12 py-4 text-2xl rounded-lg">
+          <span className="bg-black text-white px-12 py-4 text-2xl rounded-lg" onClick={handleClick}>
             let’s get started!
           </span>
         </button>

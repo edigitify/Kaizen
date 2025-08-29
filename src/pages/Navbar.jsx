@@ -21,16 +21,15 @@ const Navbar = () => {
     >
       <div className="max-full mx-auto px-20 py-4 flex items-center justify-between">
         {/* Logo */}
-       <div className="h-20 w-[200px] flex items-center justify-start overflow-hidden">
-  <NavLink to="/">
-    <img
-      src={Logo}
-      alt="Kaizen IT Solutions"
-      className="h-20 w-auto object-contain translate-y-2 md:h-24 lg:h-24"
-    />
-  </NavLink>
-</div>
-
+        <div className="h-20 w-[200px] flex items-center justify-start overflow-hidden">
+          <NavLink to="/">
+            <img
+              src={Logo}
+              alt="Kaizen IT Solutions"
+              className="h-20 w-auto object-contain translate-y-2 md:h-24 lg:h-24"
+            />
+          </NavLink>
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-10 text-sm font-medium">
@@ -118,7 +117,7 @@ const Navbar = () => {
               IT Support
             </NavLink>
           </li>
-          
+
           <li>
             <NavLink
               to="/contact"
@@ -181,7 +180,7 @@ const Navbar = () => {
                 IT Support
               </NavLink>
             </li>
-            
+
             <li>
               <NavLink to="/contact" className="hover:text-red-600">
                 Contact Us

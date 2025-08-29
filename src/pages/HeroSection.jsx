@@ -1,9 +1,14 @@
 import { FaThumbsUp, FaHeadset ,} from "react-icons/fa";
 import Background from "../assets/Backgroun.png";
-
+import { useNavigate } from "react-router-dom";
 import Arrow from "../assets/Arrow.png";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  const handleGetStarted = () => {
+    navigate("/contact");
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -25,7 +30,7 @@ const HeroSection = () => {
             expert team is dedicated to helping your business thrive in the
             digital age, ensuring sustainable growth and success.
           </p>
-          <button className="mt-6 bg-[#B81616] hover:bg-red-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg transition text-sm sm:text-base md:text-lg">
+          <button className="mt-6 bg-[#B81616] hover:bg-red-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg transition text-sm sm:text-base md:text-lg" onClick={handleGetStarted}>
             GET STARTED TODAY
           </button>
         </div>

@@ -7,10 +7,12 @@ import Image4 from "../assets/2.png";
 import Image5 from "../assets/3.png";
 import Image6 from "../assets/4.png";
 import Background1 from "../assets/AboutBack.png";
+import ChooseAbout from "../pages/ChooseAbout";
 const About = () => {
   return (
     <div className="font-sans text-gray-800 ">
       {/* Hero Section */}
+
       <section
         className="relative  text-white py-40 px-6 md:px-20"
         style={{
@@ -30,15 +32,15 @@ const About = () => {
           </button>
         </div>
       </section>
-
+      <ChooseAbout />
       {/* About Section */}
-      <section className="min-h-1/2 flex items-center justify-center px-6 md:px-20 py-16"
-      style={{
-                    backgroundImage: `url(${Background1})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    
-                  }}
+      <section
+        className="min-h-1/2 flex items-center justify-center px-6 md:px-20 py-16"
+        style={{
+          backgroundImage: `url(${Background1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image Grid */}

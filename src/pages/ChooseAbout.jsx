@@ -1,25 +1,20 @@
-import Robot from "../assets/RobMob.png";
-import RobotSmall from "../assets/RobMob.png";
 import Eye from "../assets/eye.png";
 import Target from "../assets/target.png";
-import { useNavigate } from "react-router-dom";
-const ChooseSection = () => {
-const navigate = useNavigate();
-  const handleKnowMore = () => {
-    navigate("/about");
-    window.scrollTo(0, 0);
-  };
+
+const ChooseAbout = () => {
   return (
-    <section className="bg-gray-50 py-12 px-4 md:px-16 flex flex-row md:flex-row items-center relative overflow-hidden">
+    <section className="bg-gray-50 py-12 px-4 md:px-16 flex flex-col items-center relative overflow-hidden">
       {/* Text */}
-      <div className="relative w-full md:w-3/4 px-4 md:px-6 py-6 rounded-lg z-10">
+      <div className="relative w-full md:w-3/4 px-4 md:px-6 py-6 rounded-lg z-10 flex flex-col items-center">
         {/* Heading */}
-        <h2 className="text-3xl md:text-3xl font-bold text-[#B81616] mb-4 text-center md:text-left">
-          WHO WE ARE?
-        </h2>
+        <div className="w-full flex justify-center">
+          <h2 className="text-3xl font-bold text-[#B81616] mb-4 text-center">
+            WHO WE ARE?
+          </h2>
+        </div>
 
         {/* Intro */}
-        <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-8 text-center md:text-left">
+        <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-8 text-center">
           At Kaizen IT Solutions, we specialise in delivering tailored IT
           services and solutions that drive continuous improvement and peak
           performance. Our expert team is dedicated to helping your business
@@ -27,13 +22,13 @@ const navigate = useNavigate();
         </p>
 
         {/* Vision & Mission */}
-        <ul className="space-y-8">
+        <ul className="flex flex-col md:flex-row gap-10 md:gap-16 w-full md:w-3/4">
           {/* Vision */}
-          <li className="flex items-start space-x-6">
+          <li className="flex-1 flex items-start gap-x-4 text-center md:text-left">
             <img
               src={Eye}
               alt="Vision Icon"
-              className="w-10 h-10 flex-shrink-0"
+              className="w-10 h-10 flex-shrink-0 mx-auto md:mx-0"
             />
             <div>
               <h3 className="font-semibold text-xl text-[#B81616]">Vision</h3>
@@ -47,11 +42,11 @@ const navigate = useNavigate();
           </li>
 
           {/* Mission */}
-          <li className="flex items-start space-x-6">
+          <li className="flex-1 flex items-start gap-x-4 text-center md:text-left">
             <img
               src={Target}
               alt="Mission Icon"
-              className="w-10 h-10 flex-shrink-0"
+              className="w-10 h-10 flex-shrink-0 mx-auto md:mx-0"
             />
             <div>
               <h3 className="font-semibold text-xl text-[#B81616]">Mission</h3>
@@ -63,32 +58,9 @@ const navigate = useNavigate();
             </div>
           </li>
         </ul>
-
-        {/* Button */}
-        <div className="flex justify-center md:justify-start">
-          <button className="mt-8 bg-[#B81616] hover:bg-red-700 text-white px-6 py-3 rounded-lg shadow-lg transition" onClick={handleKnowMore}>
-            Know More
-          </button>
-        </div>
-      </div>
-
-      {/* Robot Image */}
-      <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
-        {/* Desktop Image */}
-        <img
-          src={Robot}
-          alt="Robot"
-          className="relative hidden md:block max-h-[600px] w-auto object-contain"
-        />
-        {/* Mobile Image */}
-        <img
-          src={RobotSmall}
-          alt="Robot Small"
-          className="block md:hidden max-h-[350px] w-auto object-contain"
-        />
       </div>
     </section>
   );
 };
 
-export default ChooseSection;
+export default ChooseAbout;

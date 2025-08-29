@@ -9,12 +9,15 @@ import Footer from "./pages/Footer";
 import Product from "./components/Product";
 import Solutions from "./components/Solutions";
 import Support from "./components/Support";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <main>
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/itservices" element={<Services />} />
